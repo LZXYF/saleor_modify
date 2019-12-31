@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信支付</title>
+    <style>
+        .c{
+            color: red;
+        }
+    </style>
+</head>
+<script type="text/javascript" src="/static/js/jquery-3.4.1.js"></script>
+<body>
+<center>
+    <div>
+        <p>请在&nbsp;<span id="min" class="c">60</span>&nbsp;秒内完成支付</p>
+        <img src="/static/imgs/test.png" alt="支付二维码" style="display: block;"/>
+        <img src="/static/imgs/wx.png" alt="微信扫一扫">
+    </div>
+</center>
+
+<script>
+    $(function () {
+        var time = 10
+       var interval1 = setInterval(function () {
+           time = time-1;
+           if(time < 0){
+               clearInterval(interval1);
+               clearInterval(interval2);
+               window.location = "http://www.baidu.com";
+           }else{
+               $("#min").text(time);
+           }
+       },1000);
+        var interval2 = setInterval(function () {
+            console.log("发送请求.......");
+        },2000);
+    });
+</script>
+
+</body>
+</html>

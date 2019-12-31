@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝支付测试</title>
+</head>
+<body>
+    这里是测试页面
+    <br>
+    <br>
+    <form action="alipay2/" method="post">
+        <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
+        <input type="text" name="money" />
+        <input type="submit" value="Submit" />
+    </form>
+<script>
+
+
+</script>
+</body>
+</html>
