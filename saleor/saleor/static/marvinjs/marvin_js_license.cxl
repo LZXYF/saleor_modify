@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--PLEASE DO NOT MODIFY THIS FILE AND BE AWARE THAT THE FILE CONTAINS CONFIDENTIAL INFORMATION.-->
+<ChemAxon>
+<License>
+<Field Name="Software" Value="Marvin for JavaScript"/>
+<Field Name="License Term" Value="Free Web"/>
+<Field Name="Licensee" Value="SIMM Shanghai Institute of Material Medica"/>
+<Field Name="Number of Users" Value="Unlimited"/>
+<Field Name="Expiration Date" Value="2020-01-12"/>
+<Field Name="Support Expiration Date" Value="2020-01-12"/>
+<Field Name="Comment" Value="via CloudScientific "/>
+<Restriction Name="Server Use" Value="Allowed"/>
+<Signature Value="MCwCFHm7Gvq9T6Gb9jnc0tplXWv1F0WHAhQy5PKYtVh+MvmqX2CBJRNavSKvNg=="/>
+</License>
+</ChemAxon>

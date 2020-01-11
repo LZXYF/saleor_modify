@@ -1,0 +1,18 @@
+{% load i18n %}
+
+{% block subject %}
+	{% trans "Payment details" context "Payment confirmation subject" %}
+{% endblock %}
+
+{% block plain %}
+{% include 'templated_email/shared/_header.email' %}
+{% blocktrans context "Payment confirmation email text" %}
+Thank you for your payment. To see your payment details please visit:
+{{ order_details_url }}
+{% endblocktrans %}
+{% include 'templated_email/shared/_footer.email' %}
+{% endblock %}
+
+{% block html %}
+{% include 'templated_email/compiled/confirm_payment.html' %}
+{% endblock %}

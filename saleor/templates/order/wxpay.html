@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load bootstrap_form from bootstrap4 %}
+{% load static %}
+{% load i18n %}
+{% load placeholder %}
+
+
+{% block content %}
+<center>
+    <div>
+	    <img src="{% static "imgs/" %}{{ img }}" alt="支付二维码" style="display: block;" height="200" width="200"/>
+	    <img src="{% static "imgs/sao.png" %}" alt="微信扫一扫">
+    </div>
+</center>
+
+{% comment %}<script>
+    $(function () {
+        var time = 10
+       var interval1 = setInterval(function () {
+           time = time-1;
+           if(time < 0){
+               clearInterval(interval1);
+               clearInterval(interval2);
+               window.location = "http://www.baidu.com";
+           }else{
+               $("#min").text(time);
+           }
+       },1000);
+        var interval2 = setInterval(function () {
+            console.log("发送请求.......");
+        },2000);
+    });
+</script>{% endcomment %}
+{% endblock %}

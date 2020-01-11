@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load bootstrap_form from bootstrap4 %}
+{% load static %}
+{% load i18n %}
+{% load placeholder %}
+
+
+{% block content %}
+  <div class="modal" tabindex="-1" data-backdrop="static" role="dialog" id="showPayWays">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">选择您的支付方式</h5>
+        </div>
+        <div class="modal-body">
+		<center>
+			<!-- 支付宝支付方式 -->
+                  <a href="/pays/payOrder?way=ali" class="btn btn-lg btn-outline-primary" id="ali-pay">
+			  支付宝支付
+		  </a>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+		  <!-- 微信支付方式 -->
+		  <a href="/pays/payOrder?way=weChat" class="btn btn-lg btn-outline-success" id="weChat-pay" target="_blank">
+		  	   微信支付
+		  </a>
+		</center>
+        </div>
+		<div class="modal-footer">
+		    <button type="button" class="btn btn-sm btn-secondary" onclick="javascript:history.back(-1);">取消支付</button>
+		</div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- 微信支付提问是否完成支付 -->
+ <div class="modal" tabindex="-1" data-backdrop="static" role="dialog" id="wxChoose">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">您是否完成支付？</h5>
+        </div>
+        <div class="modal-body">
+		<center>
+			<!-- 支付宝支付方式 -->
+                  <a href="#" class="btn btn-lg btn-success">
+			  		完成支付
+		  		</a>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+		  <a href="#" class="btn btn-lg btn-secondary"  onclick="javascript:history.back(-1);">
+		  	   取消支付
+		  </a>
+		</center>
+        </div>
+		<!-- <div class="modal-footer">
+		    <button type="button" class="btn btn-sm btn-secondary" onclick="javascript:history.back(-1);">取消支付</button>
+		</div> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+	  $(function(){
+		  $("#showPayWays").modal("show");
+	  })
+	$("#weChat-pay").click(function(){
+		$("#showPayWays").modal("hide");
+		$("#wxChoose").modal("show");
+	});
+  </script>
+{% endblock %}
