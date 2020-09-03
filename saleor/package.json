@@ -63,7 +63,7 @@
     "jquery.cookie": "^1.4.1",
     "jss": "^9.8.7",
     "keycode": "^2.2.0",
-    "lazysizes": "^4.0.1",
+    "lazysizes": "^5.2.1",
     "lodash": "^4.17.11",
     "lodash-es": "^4.17.11",
     "materialize-css": "^0.100.2",
