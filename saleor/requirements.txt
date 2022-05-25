@@ -91,7 +91,7 @@ pyasn1==0.4.5
 pycodestyle==2.5.0
 pycparser==2.19
 pygments==2.4.2
-pyjwt==1.7.1
+pyjwt==2.4.0
 pyphen==0.9.5
 python-dateutil==2.8.0 ; python_version >= '2.7'
 python3-openid==3.1.0 ; python_version >= '3.0'
